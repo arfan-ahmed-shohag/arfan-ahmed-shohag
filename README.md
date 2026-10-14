@@ -102,8 +102,16 @@ Hi! I'm **Arfan Ahmed**, a passionate **Full-Stack Developer** who loves buildin
 ### Database & Model:
 [![Database & Model](https://go-skill-icons.vercel.app/api/icons?i=mongodb,mongoose,mysql,postgres,prisma,&theme=dark)](https://github.com/asuselessbrain)
 
+
+
+
 ### CMS & Website Builders:
-[![CMS & Website Builders](https://go-skill-icons.vercel.app/api/icons?i=wordpress,webflow,wix,elementor,divi,avada&theme=dark)](https://github.com/asuselessbrain)
+
+<p align="left">
+  <img src="https://go-skill-icons.vercel.app/api/icons?i=wordpress,webflow,elementor&theme=dark" height="48" alt="WordPress, Webflow, Elementor" />
+  <img src="https://cdn.simpleicons.org/wix" width="48" height="48" alt="Wix" />
+</p>
+
 
 ### Deployment Platform:
 [![Deployment Platform](https://go-skill-icons.vercel.app/api/icons?i=vercel,netlify,firebase,cloudflare,render,supabase&theme=dark)](https://github.com/asuselessbrain)
