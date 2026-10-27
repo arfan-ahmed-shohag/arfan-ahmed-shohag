@@ -13,12 +13,12 @@ Hi! I'm **Arfan Ahmed**, a passionate **Full-Stack Developer** who loves buildin
 <br>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=asuselessbrain&theme=dark&hide_border=false&include_all_commits=false&count_private=false" alt="asuselessbrain's GitHub Stats" width='40%' />
-  <img src="https://nirzak-streak-stats.vercel.app/?user=asuselessbrain&theme=dark&hide_border=false" alt="asuselessbrain's GitHub Stats" width='44%' />
+  <img src="https://github-readme-stats.vercel.app/api?username=arfan-ahmed-shohag&theme=dark&hide_border=false&include_all_commits=false&count_private=false" alt="Arfan Ahmed's GitHub Stats" width='40%' />
+  <img src="https://nirzak-streak-stats.vercel.app/?user=arfan-ahmed-shohag&theme=dark&hide_border=false" alt="Arfan Ahmed's GitHub Stats" width='44%' />
 </div>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=asuselessbrain&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arfan-ahmed-shohag&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
 </div>
  <br>
 
@@ -36,7 +36,7 @@ Hi! I'm **Arfan Ahmed**, a passionate **Full-Stack Developer** who loves buildin
 
   ## ⚡ Recent GitHub Activity
   <br />
-   <img src="https://github-readme-activity-graph.vercel.app/graph?username=asuselessbrain&theme=react-dark" alt="arfan leetcode stats" />
+   <img src="https://github-readme-activity-graph.vercel.app/graph?username=arfan-ahmed-shohag&theme=react-dark" alt="arfan leetcode stats" />
   <br/> <br/>
 
  ## :eyes: Current overview
