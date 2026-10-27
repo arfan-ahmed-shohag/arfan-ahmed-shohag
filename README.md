@@ -13,6 +13,12 @@ Hi! I'm **Arfan Ahmed**, a passionate **Full-Stack Developer** who loves buildin
 <br>
 
 <div align="center">
+
+<div align="center">
+  <img src="./assets/overview.svg" width="49%" alt="GitHub Overview" />
+  <img src="./assets/languages.svg" width="49%" alt="Most Used Languages" />
+</div>
+
   <img src="https://github-readme-stats.vercel.app/api?username=arfan-ahmed-shohag&theme=dark&hide_border=false&include_all_commits=false&count_private=false" alt="Arfan Ahmed's GitHub Stats" width='40%' />
   <img src="https://nirzak-streak-stats.vercel.app/?user=arfan-ahmed-shohag&theme=dark&hide_border=false" alt="Arfan Ahmed's GitHub Stats" width='44%' />
 </div>
