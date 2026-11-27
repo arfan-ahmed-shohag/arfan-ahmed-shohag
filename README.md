@@ -1,137 +1,81 @@
-<a href="https://www.facebook.com/arfan.arfanahmed.73" target="_blank">
-<img src="./images/github-header-image(1).png" />
-</a> 
-<h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&color=7e15f7&size=35&center=true&vCenter=true&width=700&height=120&duration=3000&lines=Hi+There!+👋;I'm+Arfan+Ahmed+👨🏻‍💻;A+Frontend+Developer+🎨;A+MERN+Stack+Developer+⚛️;A+Full+Stack+Developer+🚀" />
-</h1>
-
-## 👨‍💻 About Me
-
-Hi! I'm **Arfan Ahmed**, a passionate **Full-Stack Developer** who loves building modern, scalable, and user-friendly applications. I enjoy crafting clean UIs, writing efficient backend logic, and learning new technologies every day.
-
-## 🔥 My GitHub Stats :
-<br>
-
+<!-- Colours and fonts follow the portfolio theme: https://devarfan.vercel.app -->
 <div align="center">
 
-<div align="center">
-  <img src="./assets/overview.svg" width="49%" alt="GitHub Overview" />
-  <img src="./assets/languages.svg" width="49%" alt="Most Used Languages" />
-</div>
+<a href="https://devarfan.vercel.app"><img src="./assets/brand/hero.svg" width="100%" alt="Arfan Ahmed, Full Stack Developer: From Idea to Scale, I build the web you imagine" /></a>
 
-  <img src="https://github-readme-stats.vercel.app/api?username=arfan-ahmed-shohag&theme=dark&hide_border=false&include_all_commits=false&count_private=false" alt="Arfan Ahmed's GitHub Stats" width='40%' />
-  <img src="https://nirzak-streak-stats.vercel.app/?user=arfan-ahmed-shohag&theme=dark&hide_border=false" alt="Arfan Ahmed's GitHub Stats" width='44%' />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arfan-ahmed-shohag&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
-</div>
- <br>
-
- 
-<!-- ## <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFhYzJkMmQ2MWQ3ZGY3MDhjZTE3MDI2Mzk3NzE1OWQyZTRlMmYwMCZjdD1z/iY8CRBdQXODJSCERIr/giphy.gif" width=5% valign="bottom">  My Competitive Programming Profiles
-
-<br>
-
- <div align="center">
-	<img src="https://codeforces-readme-stats.vercel.app/api/card?username=Arfan143128&theme=radical" alt="arfan leetcode stats" width="60%" height="100%" alt="LeetCode STat" />
-  	<img src="https://leetcard.jacoblin.cool/ArfanAhmed?theme=unicorn" alt="arfan leetcode stats" />
-</div> -->
-
-<br>
-
-  ## ⚡ Recent GitHub Activity
-  <br />
-   <img src="https://github-readme-activity-graph.vercel.app/graph?username=arfan-ahmed-shohag&theme=react-dark" alt="arfan leetcode stats" />
-  <br/> <br/>
-
- ## :eyes: Current overview
-
-<div align="left">
-<a href="https://app.daily.dev/arfanahmedshohag"><img align="right" src="https://api.daily.dev/devcards/v2/iIBSuCFpXCBzfeV0IxQJT.png?type=default&r=z7y" width="200" alt="Arfan Ahmed's Dev Card"/></a>
-</div>
-
-- 🔭 I’m currently working on [CSIT_Inventory&Project&Thesis Management](https://github.com/asuselessbrain/Medical-Camp-Management-System.git)
-
-- 🌱 I’m currently learning **Next Js**
-
-- 👨‍💻 All of my projects are available at [https://arfanahmed.vercel.app/](https://arfanahmed.vercel.app/)
-
-- 💬 Ask me about **React**
-
-- 📫 How to reach me **arfan18@cse.pstu.ac.bd**
-
-- 📄 **[👉 Click here to see my experience](https://drive.google.com/file/d/1RCRYBElkanUGNkXwi3zNq1OCb7iJuSqh/view?usp=sharing)**
-
-- ⚡ Fun fact **😎 I write code that sometimes works on the first try. I'm just as shocked as you are.**
+<p>
+<a href="https://devarfan.vercel.app"><img src="./assets/brand/btn-portfolio.svg" height="44" alt="View Portfolio" /></a>
+<a href="https://wa.me/8801615391684"><img src="./assets/brand/btn-whatsapp.svg" height="44" alt="Let's Talk on WhatsApp" /></a>
+<a href="https://drive.google.com/file/d/1RCRYBElkanUGNkXwi3zNq1OCb7iJuSqh/view?usp=sharing"><img src="./assets/brand/btn-cv.svg" height="44" alt="My Resume" /></a>
+</p>
 
 <br />
 
-<br/>
+<img src="./assets/brand/h-about.svg" width="100%" alt="About Me" />
 
-## 🏆 GitHub Achievements
+</div>
+
+I'm **Arfan**, a full stack developer based in Dhaka, Bangladesh. I build fast, scalable web apps with the **MERN stack** and ship polished marketing sites in **WordPress** and **Webflow**. I like turning ideas into clean, responsive, production-ready products, from the database and API to the last pixel on screen.
+
+```ts
+const arfan = {
+  role: "Full Stack Developer",
+  location: "Dhaka, Bangladesh",
+  currently: "Web Developer at Exprovia",
+  stack: ["MERN", "Next.js", "NestJS", "WordPress", "Webflow"],
+  education: "B.Sc. Engg. in CSE, PSTU",
+};
+```
+
 <div align="center">
-	<img align="center" src="https://github-profile-trophy.vercel.app/?username=asuselessbrain&theme=tokyonight&no-frame=true&column=7" width="1000" alt="Arfan Ahmed's GitHub trophies"/>
-</div>
 
+<br />
 
-## :mailbox: Connect with me:
-<br>
-<p align="center">
-  <div id="badges" align="center">
-  <a href="https://www.linkedin.com/in/arfan-ahmed40/" style="text-decoration: none"  target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-  </a>
-  <a href="https://twitter.com/shoha50275" style="text-decoration: none"  target="_blank">
-  <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
-  </a>
-  <a href="https://www.facebook.com/arfan.arfanahmed.73" style="text-decoration: none"  target="_blank">
-    <img src="https://img.shields.io/badge/Facebook-blue?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook Badge"/>
-   </a> 
-<a href="https://github.com/asuselessbrain" target="_blank"><img alt="Github" src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" /></a>
-   <br>
-</div>
-</p> <br> <br>
+<img src="./assets/brand/h-skills.svg" width="100%" alt="My Tech Toolbox" />
 
+<img src="./assets/brand/stack-1.svg" width="100%" alt="Frontend: React, Next.js, TypeScript, JavaScript, Redux, TanStack, Tailwind CSS, shadcn/ui, Ant Design, Bootstrap" />
+<img src="./assets/brand/stack-2.svg" width="100%" alt="Backend &amp; Databases: Node.js, Express, NestJS, MongoDB, PostgreSQL, Mongoose, Prisma, Supabase, Firebase" />
+<img src="./assets/brand/stack-3.svg" width="100%" alt="Cloud &amp; DevOps: Docker, Actions, Linux VPS, Vercel, Netlify, Git, GitHub" />
+<img src="./assets/brand/stack-4.svg" width="100%" alt="CMS &amp; No-code: WordPress, WooCommerce, Elementor, Webflow" />
 
-## :computer: Technologies that I know
+<br />
 
-### Languages:
-[![Languages](https://go-skill-icons.vercel.app/api/icons?i=html,css,javascript,typescript,&theme=dark)](https://github.com/asuselessbrain)
+<img src="./assets/brand/h-experience.svg" width="100%" alt="My Experience" />
 
-### CSS Frameworks & Libraries:
-[![CSS Frameworks & Libraries](https://go-skill-icons.vercel.app/api/icons?i=tailwind,daisyui,materialui,bootstrap,shadcn,antdesign,&theme=dark)](https://github.com/asuselessbrain)
+<img src="./assets/brand/exp-exprovia.svg" width="49%" alt="Exprovia: Web Developer, Feb 2026 to present" />
+<img src="./assets/brand/exp-cdser.svg" width="49%" alt="CDSER: Full Stack Developer, Jun 2025 to Feb 2026" />
 
-### JavaScript Frameworks & Libraries:
-[![JavaScript Frameworks & Libraries](https://go-skill-icons.vercel.app/api/icons?i=react,next,redux,nodejs,express,axios,reactrouter&theme=dark)](https://github.com/asuselessbrain)
+<br />
+<br />
 
-### Database & Model:
-[![Database & Model](https://go-skill-icons.vercel.app/api/icons?i=mongodb,mongoose,mysql,postgres,prisma,&theme=dark)](https://github.com/asuselessbrain)
+<img src="./assets/brand/h-projects.svg" width="100%" alt="Featured Projects" />
 
+<a href="https://devarfan.vercel.app/projects/met-club-website"><img src="./assets/brand/project-met-club-website.svg" width="49%" alt="Met Club Website" /></a>
+<a href="https://devarfan.vercel.app/projects/e-learning-platform"><img src="./assets/brand/project-e-learning-platform.svg" width="49%" alt="E-Learning Platform" /></a>
+<a href="https://devarfan.vercel.app/projects/zero-olympiad"><img src="./assets/brand/project-zero-olympiad.svg" width="49%" alt="Zero Olympiad" /></a>
+<a href="https://devarfan.vercel.app/projects/real-estate-website"><img src="./assets/brand/project-real-estate-website.svg" width="49%" alt="Real Estate Website" /></a>
 
+<p><a href="https://devarfan.vercel.app/projects"><img src="./assets/brand/btn-projects.svg" height="44" alt="View all projects" /></a></p>
 
+<br />
 
-### CMS & Website Builders:
+<img src="./assets/brand/h-github.svg" width="100%" alt="GitHub Activity" />
 
-<p align="left">
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=wordpress,webflow,elementor&theme=dark" height="48" alt="WordPress, Webflow, Elementor" />
-  <img src="https://cdn.simpleicons.org/wix" width="48" height="48" alt="Wix" />
+<img src="./assets/overview.svg" width="49%" alt="GitHub overview" />
+<img src="./assets/languages.svg" width="49%" alt="Most used languages" />
+
+<br />
+<br />
+
+<a href="https://devarfan.vercel.app/contact"><img src="./assets/brand/h-contact.svg" width="100%" alt="Let's work together" /></a>
+
+Have a project in mind, or need a developer for your team? Tell me about it.
+
+<p>
+<a href="https://wa.me/8801615391684"><img src="./assets/brand/btn-whatsapp.svg" height="44" alt="Let's Talk on WhatsApp" /></a>
+<a href="mailto:arfan.exprovia@gmail.com"><img src="./assets/brand/btn-email.svg" height="44" alt="Email" /></a>
+<a href="https://www.linkedin.com/in/arfan-ahmed-shohag/"><img src="./assets/brand/btn-linkedin.svg" height="44" alt="LinkedIn" /></a>
+<a href="https://www.facebook.com/arfan.arfanahmed.73"><img src="./assets/brand/btn-facebook.svg" height="44" alt="Facebook" /></a>
 </p>
 
-
-### Deployment Platform:
-[![Deployment Platform](https://go-skill-icons.vercel.app/api/icons?i=vercel,netlify,firebase,cloudflare,render,supabase&theme=dark)](https://github.com/asuselessbrain)
-
-### Tools & Technologies:
-[![Tools & Technologies](https://go-skill-icons.vercel.app/api/icons?i=windows,linux,ubuntu,manjaro,git,github,vscode,postman,arduino,docker,chromedevtools&theme=dark)](https://github.com/asuselessbrain)
-</br>
-
-
-## 🐍 A Snake Eating My Contributions Graph
-<p align="center">
-	<picture>
-		  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/7oSkaaa/7oSkaaa/output/github-contribution-grid-snake-dark.svg">
-		  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/7oSkaaa/7oSkaaa/output/github-contribution-grid-snake.svg">
-		  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/7oSkaaa/7oSkaaa/output/github-contribution-grid-snake.svg">
-	</picture>
-</p>
+</div>

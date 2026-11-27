@@ -32,21 +32,21 @@ def write_if_changed(path, data):
         path.write_bytes(encoded)
 
 
-def svg_template(width, height, title, desc, body, accent='#8b5cf6'):
+def svg_template(width, height, title, desc, body, accent='#7fe8cf'):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{esc(title)}">
   <defs>
     <linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.85"/>
+      <stop offset="0%" stop-color="#7fe8cf" stop-opacity="0.85"/>
       <stop offset="50%" stop-color="{accent}" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1f6f64" stop-opacity="0.8"/>
     </linearGradient>
     <linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#101827"/>
-      <stop offset="100%" stop-color="#0b1220"/>
+      <stop offset="0%" stop-color="#0e1c1a"/>
+      <stop offset="100%" stop-color="#0a1412"/>
     </linearGradient>
     <linearGradient id="chipGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="{accent}" stop-opacity="0.95"/>
+      <stop offset="0%" stop-color="#1f6f64" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#1f6f64" stop-opacity="0.95"/>
     </linearGradient>
     <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
@@ -56,15 +56,15 @@ def svg_template(width, height, title, desc, body, accent='#8b5cf6'):
     </filter>
   </defs>
 
-  <rect width="{width}" height="{height}" rx="24" fill="#070d18"/>
+  <rect width="{width}" height="{height}" rx="24" fill="#070b0a"/>
   <circle cx="{width - 90}" cy="58" r="46" fill="{accent}" opacity="0.22" filter="url(#glow)"/>
-  <circle cx="80" cy="{height - 48}" r="40" fill="#2563eb" opacity="0.16" filter="url(#glow)"/>
+  <circle cx="80" cy="{height - 48}" r="40" fill="#1f6f64" opacity="0.16" filter="url(#glow)"/>
 
   <rect x="1.25" y="1.25" width="{width - 2.5}" height="{height - 2.5}" rx="22.75" fill="url(#panelGrad)" stroke="url(#borderGrad)" stroke-opacity="0.38" stroke-width="1.5"/>
-  <rect x="18" y="18" width="{width - 36}" height="{height - 36}" rx="20" fill="#0b1220" fill-opacity="0.84" stroke="#1e293b" stroke-opacity="0.8"/>
+  <rect x="18" y="18" width="{width - 36}" height="{height - 36}" rx="20" fill="#0a1412" fill-opacity="0.84" stroke="#1f3a36" stroke-opacity="0.8"/>
 
-  <text x="30" y="48" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">{esc(title)}</text>
-  <text x="30" y="68" fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="500">{esc(desc)}</text>
+  <text x="30" y="48" fill="#eaf5f2" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">{esc(title)}</text>
+  <text x="30" y="68" fill="#9db5b0" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="500">{esc(desc)}</text>
 
   {body}
 </svg>'''
@@ -73,10 +73,10 @@ def svg_template(width, height, title, desc, body, accent='#8b5cf6'):
 def metric_card(x, y, w, h, label, value, suffix=''):
     return f'''
     <g>
-      <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="14" fill="#101a2c" stroke="#22314d"/>
-      <rect x="{x+1}" y="{y+1}" width="{w-2}" height="{h-2}" rx="13" fill="none" stroke="#0f172a" opacity="0.7"/>
-      <text x="{x+16}" y="{y+22}" fill="#8ea2c0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="9.5" font-weight="700">{esc(label)}</text>
-      <text x="{x+16}" y="{y+53}" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">{esc(value)}<tspan fill="#93c5fd" font-size="12" font-weight="700">{esc(suffix)}</tspan></text>
+      <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="14" fill="#0e1c1a" stroke="#1f3a36"/>
+      <rect x="{x+1}" y="{y+1}" width="{w-2}" height="{h-2}" rx="13" fill="none" stroke="#070b0a" opacity="0.7"/>
+      <text x="{x+16}" y="{y+22}" fill="#9db5b0" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="9.5" font-weight="700">{esc(label)}</text>
+      <text x="{x+16}" y="{y+53}" fill="#eaf5f2" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">{esc(value)}<tspan fill="#7fe8cf" font-size="12" font-weight="700">{esc(suffix)}</tspan></text>
     </g>'''
 
 
@@ -86,15 +86,15 @@ def generate_overview(profile, repos, stars, forks):
     public_repos = profile.get('public_repos', 0)
     created = (profile.get('created_at') or '')[:4]
     body = []
-    body.append(f'<rect x="356" y="28" width="150" height="28" rx="14" fill="url(#chipGrad)" opacity="0.95"/><text x="431" y="46.5" text-anchor="middle" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">@{esc(USER)}</text>')
+    body.append(f'<rect x="356" y="28" width="150" height="28" rx="14" fill="url(#chipGrad)" opacity="0.95"/><text x="431" y="46.5" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">@{esc(USER)}</text>')
     body.append(metric_card(30, 92, 228, 78, 'PUBLIC REPOSITORIES', public_repos))
     body.append(metric_card(280, 92, 228, 78, 'TOTAL STARS', stars))
     body.append(metric_card(30, 186, 228, 78, 'REPOSITORY FORKS', forks))
     body.append(metric_card(280, 186, 228, 78, 'FOLLOWERS', followers))
     body.append(f'''
       <g>
-        <text x="32" y="291" fill="#64748b" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="10">Built from public GitHub API data · Reliable self-hosted card</text>
-        <text x="508" y="291" text-anchor="end" fill="#93c5fd" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700">Since {esc(created or 'GitHub')}</text>
+        <text x="32" y="291" fill="#9db5b0" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="10">Built from public GitHub API data · Reliable self-hosted card</text>
+        <text x="508" y="291" text-anchor="end" fill="#7fe8cf" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700">Since {esc(created or 'GitHub')}</text>
       </g>
     ''')
     return svg_template(
@@ -103,7 +103,7 @@ def generate_overview(profile, repos, stars, forks):
         f'{name} · GitHub Overview',
         'A polished snapshot of your public GitHub profile metrics',
         ''.join(body),
-        accent='#8b5cf6'
+        accent='#7fe8cf'
     )
 
 
@@ -112,15 +112,15 @@ def generate_languages(profile, langs):
     total = sum(langs.values())
     ranked = langs.most_common(6)
     colors = {
-        'TypeScript': '#3178c6', 'JavaScript': '#f1e05a', 'HTML': '#e34c26',
-        'CSS': '#663399', 'Python': '#3572A5', 'PHP': '#4F5D95',
-        'Java': '#b07219', 'Jupyter Notebook': '#DA5B0B', 'C++': '#f34b7d',
-        'Go': '#00ADD8', 'Shell': '#89e051', 'C': '#555555', 'C#': '#178600'
+        'TypeScript': '#7fe8cf', 'JavaScript': '#eaf5f2', 'HTML': '#1f6f64',
+        'CSS': '#4cc7ad', 'Python': '#58b9a5', 'PHP': '#3b7a70',
+        'Java': '#58b9a5', 'Jupyter Notebook': '#2f8f80', 'C++': '#6fd2bb',
+        'Go': '#a6f5df', 'Shell': '#a6f5df', 'C': '#9db5b0', 'C#': '#2f8f80'
     }
-    palette = ['#8b5cf6', '#22c55e', '#f97316', '#38bdf8', '#e879f9', '#f43f5e']
+    palette = ['#7fe8cf', '#4cc7ad', '#2f8f80', '#7fe8cf', '#c4efe4', '#6fd2bb']
     body = []
-    body.append(f'<rect x="383" y="28" width="123" height="28" rx="14" fill="url(#chipGrad)" opacity="0.95"/><text x="444.5" y="46.5" text-anchor="middle" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">Top {len(ranked)} Languages</text>')
-    body.append('<rect x="30" y="92" width="478" height="16" rx="8" fill="#0f172a" stroke="#22314d"/>')
+    body.append(f'<rect x="383" y="28" width="123" height="28" rx="14" fill="url(#chipGrad)" opacity="0.95"/><text x="444.5" y="46.5" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">Top {len(ranked)} Languages</text>')
+    body.append('<rect x="30" y="92" width="478" height="16" rx="8" fill="#070b0a" stroke="#1f3a36"/>')
     if total:
         cursor = 31
         for i, (lang, amount) in enumerate(ranked):
@@ -140,19 +140,19 @@ def generate_languages(profile, langs):
             body.append(f'''
             <g>
               <circle cx="{x}" cy="{y - 4}" r="5" fill="{color}"/>
-              <text x="{x + 14}" y="{y}" fill="#e2e8f0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">{esc(lang)}</text>
-              <text x="{x + 184}" y="{y}" text-anchor="end" fill="#93a4bd" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="600">{pct:.1f}%</text>
+              <text x="{x + 14}" y="{y}" fill="#eaf5f2" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">{esc(lang)}</text>
+              <text x="{x + 184}" y="{y}" text-anchor="end" fill="#9db5b0" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="600">{pct:.1f}%</text>
             </g>''')
-        body.append(f'<text x="30" y="286" fill="#64748b" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="10">Calculated from non-fork public repositories · Byte share across detected languages</text>')
+        body.append(f'<text x="30" y="286" fill="#9db5b0" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="10">Calculated from non-fork public repositories · Byte share across detected languages</text>')
     else:
-        body.append('<text x="30" y="140" fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13">No public repository language data available right now.</text>')
+        body.append('<text x="30" y="140" fill="#9db5b0" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="13">No public repository language data available right now.</text>')
     return svg_template(
         540,
         310,
         'Most Used Languages',
         f"An elegant breakdown of {esc(name)}'s public repository language usage",
         ''.join(body),
-        accent='#0ea5e9'
+        accent='#7fe8cf'
     )
 
 
