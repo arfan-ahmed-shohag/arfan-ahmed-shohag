@@ -56,7 +56,7 @@ async function collect() {
         `query($login:String!,$after:String){ user(login:$login){
           repositories(first:100, after:$after, ownerAffiliations:OWNER, privacy:PUBLIC){
             totalCount pageInfo{hasNextPage endCursor}
-            nodes{ isFork stargazerCount languages(first:20){edges{size node{name}}} } } } }`,
+            nodes{ name isFork stargazerCount primaryLanguage{name} languages(first:20){edges{size node{name}}} } } } }`,
         { login: USER, after },
       )
     ).user.repositories;
@@ -94,6 +94,11 @@ async function collect() {
     repos: repoCount,
     stars: owned.reduce((n, r) => n + r.stargazerCount, 0),
     langs: [...langs].sort((a, b) => b[1] - a[1]),
+    top: owned
+      .filter((r) => r.name !== USER && r.stargazerCount > 0)
+      .sort((a, b) => b.stargazerCount - a.stargazerCount || a.name.localeCompare(b.name))
+      .slice(0, 4)
+      .map((r) => ({ name: r.name, stars: r.stargazerCount, language: r.primaryLanguage?.name ?? "Code" })),
   };
 }
 
@@ -229,11 +234,63 @@ ${top.map(([name, p], i) => {
     }).join("\n")}`, -5);
 }
 
+function bars(name, heading, note, items, delay) {
+  const max = Math.max(1, ...items.map((i) => i.value));
+  const best = items.findIndex((i) => i.value === max);
+  const left = 34, right = 558, bottom = 292, tall = 168;
+  const step = (right - left) / items.length, w = Math.min(34, step * 0.62);
+  save(name, 592, 340, heading + ": " + items.map((i) => i.label + " " + i.value).join(", "),
+    `${title(30, 52, heading)}${text(562, 48, note, { size: 14, fill: C.muted, anchor: "end" })}
+<line x1="${left}" y1="${bottom}" x2="${right}" y2="${bottom}" stroke="${C.border}"/>
+${items.map(({ label, value }, i) => {
+      const h = value ? Math.max(4, (value / max) * tall) : 0, cx = left + step * i + step / 2;
+      return `<rect x="${(cx - w / 2).toFixed(1)}" y="${(bottom - h).toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}" rx="5" fill="${i === best && value ? C.accent : C.deep}"/>
+${text(cx.toFixed(1), (bottom - h - 8).toFixed(1), num(value), { size: 12, fill: i === best ? C.fg : C.muted, anchor: "middle" })}${text(cx.toFixed(1), bottom + 22, label, { size: 12, fill: C.muted, anchor: "middle" })}`;
+    }).join("\n")}`, delay);
+}
+
+/** contributions per month, last 12 months */
+function months(d) {
+  const sums = new Map();
+  for (const [date, c] of d.calendar) sums.set(date.slice(0, 7), (sums.get(date.slice(0, 7)) || 0) + c);
+  const items = [...sums].slice(-12).map(([month, value]) => ({
+    label: new Date(month + "-01T00:00:00Z").toLocaleDateString("en-US", { month: "short", timeZone: "UTC" }),
+    value,
+  }));
+  bars("months.svg", "Monthly Activity", "last 12 months", items, -2.5);
+}
+
+/** which weekdays are busiest, last 12 months */
+function weekdays(d) {
+  const sums = [0, 0, 0, 0, 0, 0, 0];
+  for (const [date, c] of d.calendar.slice(-365)) sums[new Date(date + "T00:00:00Z").getUTCDay()] += c;
+  const names = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  bars("weekdays.svg", "Busiest Days", "last 12 months", names.map((label, i) => ({ label, value: sums[i] })), -4.2);
+}
+
+/** the four public repositories with the most stars */
+function topRepos(d) {
+  if (!d.top.length) return;
+  const short = (s, n) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
+  save("repos.svg", 1200, 200, "Top repositories: " + d.top.map((r) => `${r.name}, ${r.stars} stars`).join("; "),
+    `${title(34, 54, "Top Repositories")}${text(1166, 50, "most starred", { size: 14, fill: C.muted, anchor: "end" })}
+${d.top.map((r, i) => {
+      const x = 34 + i * 287;
+      return `<rect x="${x}" y="80" width="271" height="92" rx="14" fill="${C.bg}" stroke="${C.border}"/>
+${text(x + 18, 112, esc(short(r.name, 28)), { size: 15, w: 600 })}
+<circle cx="${x + 24}" cy="145" r="5" fill="${C.accent}"/>${text(x + 36, 150, esc(r.language), { size: 13, fill: C.muted })}
+${text(x + 253, 150, `★ ${r.stars}`, { size: 14, fill: C.accent, w: 600, anchor: "end" })}`;
+    }).join("\n")}`, -6);
+}
+
 // draw only after all data arrived, so a failed request keeps the previous cards
 const data = await collect();
 mkdirSync(OUT, { recursive: true });
 overview(data);
 streakCard(data);
 month(data);
+months(data);
+weekdays(data);
+topRepos(data);
 languages(data);
 console.log(`Stats cards written for ${USER}: ${data.calendar.length} days, ${data.repos} public repositories`);

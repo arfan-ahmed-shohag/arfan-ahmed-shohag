@@ -42,7 +42,10 @@
 <img src="./assets/stats/overview.svg" width="49%" alt="Overall GitHub stats" />
 <img src="./assets/stats/streak.svg" width="49%" alt="Contribution streak" />
 <img src="./assets/stats/month.svg" width="100%" alt="Contributions in the last 30 days" />
+<img src="./assets/stats/months.svg" width="49%" alt="Contributions per month" />
+<img src="./assets/stats/weekdays.svg" width="49%" alt="Busiest days of the week" />
 <img src="./assets/stats/languages.svg" width="100%" alt="Most used languages" />
+<img src="./assets/stats/repos.svg" width="100%" alt="Top repositories" />
 
 <br />
 <br />

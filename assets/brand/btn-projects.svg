@@ -5,4 +5,7 @@
 <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#7fe8cf" opacity=".16"/></pattern></defs>
 <rect x="1" y="1" width="220" height="44" rx="10" fill="#7fe8cf" stroke="#7fe8cf" stroke-width="1.5"/>
 <svg x="20" y="15" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" color="#070b0a" style="color:#070b0a" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg><text x="46" y="29" class="s" font-size="15" font-weight="600" fill="#070b0a" text-anchor="start" >View all projects</text>
+<style>@media (prefers-reduced-motion:reduce){.sweep{display:none}}</style><clipPath id="shine4"><rect x="1" y="1" width="220" height="44" rx="10"/></clipPath>
+<g class="sweep" clip-path="url(#shine4)"><polygon points="-49,1 -13,1 -33,45 -69,45" fill="#ffffff" opacity="0.6">
+<animateTransform attributeName="transform" type="translate" values="0 0;340 0;340 0" keyTimes="0;0.32;1" dur="3.6s" begin="0.00s" repeatCount="indefinite"/></polygon></g>
 </svg>
