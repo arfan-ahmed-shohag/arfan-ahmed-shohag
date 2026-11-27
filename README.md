@@ -45,15 +45,6 @@
 <br />
 <br />
 
-<a href="https://devarfan.vercel.app/contact"><img src="./assets/brand/h-contact.svg" width="100%" alt="Let's work together" /></a>
-
-Have a project in mind, or need a developer for your team? Tell me about it.
-
-<p>
-<a href="https://wa.me/8801615391684"><img src="./assets/brand/btn-whatsapp.svg" height="44" alt="Let's Talk on WhatsApp" /></a>
-<a href="mailto:arfan.exprovia@gmail.com"><img src="./assets/brand/btn-email.svg" height="44" alt="Email" /></a>
-<a href="https://www.linkedin.com/in/arfan-ahmed-shohag/"><img src="./assets/brand/btn-linkedin.svg" height="44" alt="LinkedIn" /></a>
-<a href="https://www.facebook.com/arfan.arfanahmed.73"><img src="./assets/brand/btn-facebook.svg" height="44" alt="Facebook" /></a>
-</p>
+<p><a href="https://devarfan.vercel.app/contact"><img src="./assets/brand/cta.svg" width="100%" align="top" alt="Let's work together" /></a><a href="https://devarfan.vercel.app/contact"><img src="./assets/brand/cta-left.svg" width="19%" align="top" alt="" /></a><a href="https://wa.me/8801615391684"><img src="./assets/brand/cta-talk.svg" width="18%" align="top" alt="Let's Talk" /></a><a href="mailto:arfan.exprovia@gmail.com"><img src="./assets/brand/cta-email.svg" width="14%" align="top" alt="Email" /></a><a href="https://www.linkedin.com/in/arfan-ahmed-shohag/"><img src="./assets/brand/cta-linkedin.svg" width="15%" align="top" alt="LinkedIn" /></a><a href="https://www.facebook.com/arfan.arfanahmed.73"><img src="./assets/brand/cta-facebook.svg" width="15%" align="top" alt="Facebook" /></a><a href="https://devarfan.vercel.app/contact"><img src="./assets/brand/cta-right.svg" width="19%" align="top" alt="" /></a><a href="mailto:arfan.exprovia@gmail.com"><img src="./assets/brand/cta-foot.svg" width="100%" align="top" alt="arfan.exprovia@gmail.com" /></a></p>
 
 </div>
