@@ -1,33 +1,11 @@
 <!-- Colours and fonts follow the portfolio theme: https://devarfan.vercel.app -->
 <div align="center">
 
-<a href="https://devarfan.vercel.app"><img src="./assets/brand/hero.svg" width="100%" alt="Arfan Ahmed, Full Stack Developer: From Idea to Scale, I build the web you imagine" /></a>
-
-<p>
-<a href="https://devarfan.vercel.app"><img src="./assets/brand/btn-portfolio.svg" height="44" alt="View Portfolio" /></a>
-<a href="https://wa.me/8801615391684"><img src="./assets/brand/btn-whatsapp.svg" height="44" alt="Let's Talk on WhatsApp" /></a>
-<a href="https://drive.google.com/file/d/1RCRYBElkanUGNkXwi3zNq1OCb7iJuSqh/view?usp=sharing"><img src="./assets/brand/btn-cv.svg" height="44" alt="My Resume" /></a>
-</p>
+<p><a href="https://devarfan.vercel.app"><img src="./assets/brand/hero.svg" width="100%" align="top" alt="Arfan Ahmed, Full Stack Developer: From Idea to Scale, I build the web you imagine" /></a><a href="https://devarfan.vercel.app"><img src="./assets/brand/hero-left.svg" width="5%" align="top" alt="" /></a><a href="https://devarfan.vercel.app"><img src="./assets/brand/hero-portfolio.svg" width="18%" align="top" alt="View Portfolio" /></a><a href="https://wa.me/8801615391684"><img src="./assets/brand/hero-talk.svg" width="14%" align="top" alt="Let's Talk on WhatsApp" /></a><a href="https://drive.google.com/file/d/1RCRYBElkanUGNkXwi3zNq1OCb7iJuSqh/view?usp=sharing"><img src="./assets/brand/hero-resume.svg" width="15%" align="top" alt="My Resume" /></a><a href="https://devarfan.vercel.app"><img src="./assets/brand/hero-right.svg" width="48%" align="top" alt="" /></a></p>
 
 <br />
 
-<img src="./assets/brand/h-about.svg" width="100%" alt="About Me" />
-
-</div>
-
-I'm **Arfan**, a full stack developer based in Dhaka, Bangladesh. I build fast, scalable web apps with the **MERN stack** and ship polished marketing sites in **WordPress** and **Webflow**. I like turning ideas into clean, responsive, production-ready products, from the database and API to the last pixel on screen.
-
-```ts
-const arfan = {
-  role: "Full Stack Developer",
-  location: "Dhaka, Bangladesh",
-  currently: "Web Developer at Exprovia",
-  stack: ["MERN", "Next.js", "NestJS", "WordPress", "Webflow"],
-  education: "B.Sc. Engg. in CSE, PSTU",
-};
-```
-
-<div align="center">
+<img src="./assets/brand/about.svg" width="100%" alt="About Arfan: full stack developer in Dhaka building MERN apps, WordPress and Webflow sites. Currently Web Developer at Exprovia." />
 
 <br />
 
