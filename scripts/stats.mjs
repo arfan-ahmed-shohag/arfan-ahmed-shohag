@@ -56,7 +56,7 @@ async function collect() {
         `query($login:String!,$after:String){ user(login:$login){
           repositories(first:100, after:$after, ownerAffiliations:OWNER, privacy:PUBLIC){
             totalCount pageInfo{hasNextPage endCursor}
-            nodes{ name isFork stargazerCount primaryLanguage{name} languages(first:20){edges{size node{name}}} } } } }`,
+            nodes{ isFork stargazerCount languages(first:20){edges{size node{name}}} } } } }`,
         { login: USER, after },
       )
     ).user.repositories;
@@ -94,11 +94,6 @@ async function collect() {
     repos: repoCount,
     stars: owned.reduce((n, r) => n + r.stargazerCount, 0),
     langs: [...langs].sort((a, b) => b[1] - a[1]),
-    top: owned
-      .filter((r) => r.name !== USER && r.stargazerCount > 0)
-      .sort((a, b) => b.stargazerCount - a.stargazerCount || a.name.localeCompare(b.name))
-      .slice(0, 4)
-      .map((r) => ({ name: r.name, stars: r.stargazerCount, language: r.primaryLanguage?.name ?? "Code" })),
   };
 }
 
@@ -268,21 +263,6 @@ function weekdays(d) {
   bars("weekdays.svg", "Busiest Days", "last 12 months", names.map((label, i) => ({ label, value: sums[i] })), -4.2);
 }
 
-/** the four public repositories with the most stars */
-function topRepos(d) {
-  if (!d.top.length) return;
-  const short = (s, n) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
-  save("repos.svg", 1200, 200, "Top repositories: " + d.top.map((r) => `${r.name}, ${r.stars} stars`).join("; "),
-    `${title(34, 54, "Top Repositories")}${text(1166, 50, "most starred", { size: 14, fill: C.muted, anchor: "end" })}
-${d.top.map((r, i) => {
-      const x = 34 + i * 287;
-      return `<rect x="${x}" y="80" width="271" height="92" rx="14" fill="${C.bg}" stroke="${C.border}"/>
-${text(x + 18, 112, esc(short(r.name, 28)), { size: 15, w: 600 })}
-<circle cx="${x + 24}" cy="145" r="5" fill="${C.accent}"/>${text(x + 36, 150, esc(r.language), { size: 13, fill: C.muted })}
-${text(x + 253, 150, `★ ${r.stars}`, { size: 14, fill: C.accent, w: 600, anchor: "end" })}`;
-    }).join("\n")}`, -6);
-}
-
 // draw only after all data arrived, so a failed request keeps the previous cards
 const data = await collect();
 mkdirSync(OUT, { recursive: true });
@@ -291,6 +271,5 @@ streakCard(data);
 month(data);
 months(data);
 weekdays(data);
-topRepos(data);
 languages(data);
 console.log(`Stats cards written for ${USER}: ${data.calendar.length} days, ${data.repos} public repositories`);
